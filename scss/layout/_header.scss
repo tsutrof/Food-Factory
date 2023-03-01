@@ -3,16 +3,23 @@
         font-weight: bold;
     }
 
-    .branding a{
-        font-size: 2rem;
+    .branding {
+        a{
+            font-size: 2rem;
+            
+            span{
+                color: $clr-primary;
+            }
 
-        span{
-            color: $clr-primary;
         }
-
+        
     }
 
     &__nav{
+        @include mediaQuery($mobile){
+            display: none;
+        }
+        
         a{
             position: relative;
 

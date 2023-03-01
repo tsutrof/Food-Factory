@@ -67,6 +67,13 @@ p {
   margin-bottom: 1rem;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+  color: #ff9a1e;
+}
+
 .container {
   width: 100%;
   max-width: 120rem;
@@ -456,6 +463,11 @@ p {
 .header .branding a span {
   color: #ff9a1e;
 }
+@media screen and (max-width: 48rem) {
+  .header__nav {
+    display: none;
+  }
+}
 .header__nav a {
   position: relative;
 }
@@ -479,18 +491,23 @@ p {
 .banner__wrapper {
   min-height: calc(100vh - 80.39px);
 }
+@media screen and (max-width: 48rem) {
+  .banner__wrapper {
+    margin-top: 5rem;
+    min-height: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5rem;
+  }
+}
 .banner__content {
   max-width: 50rem;
   width: 100%;
 }
 .banner__content h1 {
   font-size: clamp(3rem, 6vw, 6rem);
-  font-weight: bold;
   margin-bottom: 2rem;
   line-height: 1.2;
-}
-.banner__content h1 span {
-  color: #ff9a1e;
 }
 .banner__content p {
   font-size: 1.8rem;
@@ -502,8 +519,15 @@ p {
 
 .product__cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
+}
+@media screen and (max-width: 48rem) {
+  .product__cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+  }
 }
 
 .product__item {
@@ -536,12 +560,14 @@ p {
 }
 .product__item img {
   border-radius: 50%;
-  width: 20rem;
-  height: 20rem;
   margin: 0 auto 3rem;
   display: block;
+  width: 20rem;
+  height: 20rem;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
 }
 .product__item a {
   display: block;
@@ -551,11 +577,10 @@ p {
 .item__info {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
   align-items: center;
+  margin-bottom: 2rem;
 }
 .item__info h3 {
-  font-weight: 800;
   font-size: 2.5rem;
 }
 .item__info h4 {
@@ -616,6 +641,11 @@ p {
   background-size: cover;
   background-position: 80px;
 }
+@media screen and (max-width: 48rem) {
+  .booking {
+    background-position: 0;
+  }
+}
 .booking__content {
   background-color: #ff9a1e;
   color: #fff;
@@ -626,6 +656,13 @@ p {
   place-items: center;
   justify-content: flex-start;
 }
+@media screen and (max-width: 48rem) {
+  .booking__content {
+    padding: 2rem;
+    width: 100%;
+    background-color: rgba(255, 154, 30, 0.6);
+  }
+}
 .booking__content::before {
   content: "";
   position: absolute;
@@ -634,6 +671,11 @@ p {
   height: 100%;
   width: 40vw;
   background-color: #ff9a1e;
+}
+@media screen and (max-width: 48rem) {
+  .booking__content::before {
+    display: none;
+  }
 }
 .booking__content .inner {
   max-width: 40rem;
@@ -647,11 +689,241 @@ p {
 }
 .booking__content .inner h2 {
   font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: bold;
   margin: 4rem 0 3rem;
 }
 .booking__content .inner p {
   margin-bottom: 3rem;
+}
+
+.work__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+@media screen and (max-width: 48rem) {
+  .work__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+  }
+}
+.work__wrapper .work__card {
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+.work__wrapper .work__card i {
+  color: #ff9a1e;
+  font-size: 3rem;
+}
+.work__wrapper .work__card h3 {
+  font-size: 2rem;
+  margin: 2rem 0;
+  color: #ff9a1e;
+}
+.work__wrapper .work__card p {
+  opacity: 0.8;
+  font-weight: bold;
+}
+
+.app__wrapper {
+  padding: 2rem 10rem;
+  background-color: #ffe2bf;
+  border-radius: 3rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 2rem;
+  height: 100%;
+  max-height: 44rem;
+  overflow: hidden;
+}
+@media screen and (max-width: 48rem) {
+  .app__wrapper {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    max-height: 74rem;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .app__img {
+    text-align: center;
+    margin-top: 5rem;
+  }
+}
+.app__content {
+  max-width: 55rem;
+  width: 100%;
+}
+.app__content h2 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  margin: 4rem 0 3rem;
+}
+.app__content p {
+  font-size: 2rem;
+  opacity: 0.5;
+  margin-bottom: 4rem;
+  font-weight: bold;
+}
+
+.testimonials__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+@media screen and (max-width: 48rem) {
+  .testimonials__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+  }
+}
+.testimonials__card {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  grid-gap: 1rem;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  position: relative;
+}
+.testimonials__card::before {
+  content: "";
+  position: absolute;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background-color: #ff9a1e;
+  top: 15px;
+  left: 15px;
+  z-index: -1;
+}
+.testimonials__card img {
+  width: 9rem;
+  height: 9rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+.testimonials__card h4 {
+  font-size: 2rem;
+  line-height: 1;
+}
+.testimonials__card small {
+  font-size: 1.2rem;
+  opacity: 0.5;
+}
+.testimonials__card ul {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+.testimonials__card ul i {
+  color: #ff9a1e;
+}
+.testimonials__card p {
+  opacity: 0.8;
+}
+.testimonials .inner {
+  width: 10rem;
+  height: 10rem;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid #ff9a1e;
+}
+.testimonials__card:hover img {
+  transform: scale(1.2);
+}
+.testimonials__img {
+  padding: 1rem 0;
+}
+
+.newsletter {
+  background-image: linear-gradient(rgba(45, 45, 45, 0.6), rgba(45, 45, 45, 0.6)), url(../img/restaurant.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1px;
+  min-height: 45rem;
+}
+.newsletter__wrapper {
+  max-width: 75rem;
+  width: 100%;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+}
+.newsletter__wrapper h2 {
+  font-size: clamp(2rem, 6vw, 5rem);
+}
+.newsletter__wrapper p {
+  font-size: 2rem;
+  margin: 2rem 0;
+  opacity: 0.8;
+}
+.newsletter__wrapper form input {
+  text-align: left;
+  padding: 0.8rem 1.6rem;
+  width: 38rem;
+  border: 3px solid #fff;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  color: #2d2d2d;
+}
+.newsletter__wrapper form button {
+  background-color: #ff9a1e;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.5rem;
+  border: 3px solid #fff;
+  transform: translateX(-12px);
+}
+@media screen and (max-width: 48rem) {
+  .newsletter__wrapper form button {
+    width: 38rem;
+    margin-top: 1rem;
+    transform: translateX(0);
+  }
+}
+
+.faq__block {
+  border-radius: 2rem;
+  box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.06);
+  margin-bottom: 4rem;
+}
+.faq__question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  cursor: pointer;
+}
+.faq__question h3 {
+  font-size: 2.5rem;
+}
+.faq__question i {
+  font-size: 1.8rem;
+  transition: 0.2s ease-in-out;
+}
+.faq__answer {
+  padding: 0.5rem 3rem;
+  height: auto;
+  max-height: 0;
+  transition: max-height 0.5s ease;
+  overflow: hidden;
+}
+.faq__answer.open {
+  max-height: 50rem;
+}
+.faq__question.open i {
+  transform: rotate(45deg);
 }
 
 .block__header {
@@ -669,4 +941,43 @@ p {
 }
 .block__header h2 span {
   text-transform: capitalize;
+}
+
+.footer {
+  background-color: #2d2d2d;
+  color: #fff;
+  padding: 6rem 0;
+}
+.footer a {
+  color: #fff;
+}
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+@media screen and (max-width: 48rem) {
+  .footer__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+  }
+}
+.footer__item h3 {
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  font-size: 1.8rem;
+}
+.footer__item p {
+  width: 80%;
+}
+.footer__item li {
+  margin-bottom: 1.6rem;
+}
+
+.copyright {
+  background-color: #2d2d2d;
+  text-align: center;
+  color: #ff9a1e;
+  padding: 0.5rem 0;
 }/*# sourceMappingURL=main.css.map */
