@@ -926,6 +926,195 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   transform: rotate(45deg);
 }
 
+.info__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10rem;
+}
+@media screen and (max-width: 48rem) {
+  .info__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5rem;
+  }
+}
+.info__img__lg {
+  padding: 4rem;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.06);
+  margin-bottom: 8rem;
+  background-color: #fff;
+  text-align: center;
+}
+.info__img__variation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+.info__img__variation button {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.06);
+  height: 12rem;
+  text-align: center;
+}
+.info__img__variation button img {
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  transform: translateY(-5rem);
+}
+.info__img__variation button h3 {
+  transform: translateY(-4rem);
+}
+.info__content__header h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+}
+.info__content__header .meta, .info__content__header ul {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.info__content__header .meta ul, .info__content__header ul ul {
+  gap: 0.5rem;
+}
+.info__content__header .meta ul li i, .info__content__header ul ul li i {
+  color: #ff9a1e;
+}
+.info__content__header .meta ul li:last-child i, .info__content__header ul ul li:last-child i {
+  color: #e6e6e6;
+}
+.info__content__header .meta small, .info__content__header ul small {
+  color: #ccc;
+  font-size: 1.2rem;
+}
+.info__content__header .prices {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info__content__header .prices h2 {
+  font-size: 5rem;
+  color: #ff9a1e;
+}
+.info__content__header .prices p {
+  margin-bottom: 0;
+  color: #ff9a1e;
+  font-size: 2rem;
+  text-decoration: line-through;
+}
+.info__content__header .prices h3 {
+  font-size: 2.5rem;
+  color: #ccc;
+}
+.info__content__body h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.info__content__body .sizes {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+.info__content__body .sizes li {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  color: #cacaca;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1px;
+  cursor: pointer;
+}
+.info__content__body .sizes li.active {
+  background-color: #ff9a1e;
+  color: #fff;
+  box-shadow: 0px 4px 10px rgba(255, 154, 30, 0.3);
+}
+.info__content__body .quantity {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.8rem;
+  border-radius: 2rem;
+  background-color: #f5f5f5;
+  box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.06);
+  gap: 2rem;
+  border: 1px solid #cacaca;
+}
+.info__content__body .quantity li {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.info__content__body .quantity li:first-child {
+  color: #ccc;
+}
+.info__content__body .btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: 3rem 0;
+}
+
+.related__foods {
+  padding: 6rem 0;
+  border-top: 1px solid #f5f5f5;
+}
+.related__foods h3 {
+  font-size: 2rem;
+  margin-bottom: 8rem;
+}
+.related__foods__card {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  height: 12rem;
+  text-align: center;
+}
+.related__foods__card img {
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  transform: translateY(-5rem);
+}
+.related__foods__card h3 {
+  transform: translateY(-4rem);
+}
+
+.tns-inner {
+  height: 25rem;
+  transform: translateY(37px);
+}
+
+.tns-controls {
+  display: flex;
+  gap: 1rem;
+}
+.tns-controls button {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1px;
+  background-color: #ff9a1e;
+  color: #fff;
+  font-size: 2rem;
+}
+
 .block__header {
   text-align: center;
   margin-bottom: 4rem;
