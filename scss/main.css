@@ -56,6 +56,11 @@ body {
   font-size: 1.6rem;
   line-height: 1.4;
   color: #2d2d2d;
+  transition: 0.5s ease;
+}
+
+body.show {
+  transform: translateX(-350px);
 }
 
 a {
@@ -463,9 +468,54 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
 .header .branding a span {
   color: #ff9a1e;
 }
+.header .btn__show {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  font-size: 3rem;
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 48rem) {
+  .header .btn__show {
+    display: block;
+  }
+}
+.header .btn__back {
+  display: none;
+}
+@media screen and (max-width: 48rem) {
+  .header .btn__back {
+    display: block;
+  }
+}
 @media screen and (max-width: 48rem) {
   .header__nav {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -350px;
+    height: 100vh;
+    width: 300px;
+    background-color: #fff;
+    border-left: 1px solid #ccc;
+    z-index: 999;
+  }
+  .header__nav .btn__back {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+  }
+  .header__nav ul {
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-top: 6rem;
+  }
+  .header__nav ul li {
+    margin-bottom: 2rem;
+  }
+  .header__nav ul li a {
+    font-size: 2.5rem;
   }
 }
 .header__nav a {

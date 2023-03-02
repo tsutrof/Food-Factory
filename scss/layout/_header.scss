@@ -15,9 +15,57 @@
         
     }
 
+    .btn__show{
+        position: absolute;
+        top: 1rem;
+        right: 3rem;
+        font-size: 3rem;
+        cursor: pointer;
+        display: none;
+        @include mediaQuery($mobile){
+            display: block;
+        }
+    }
+
+    .btn__back{
+        display: none;
+        @include mediaQuery($mobile){
+            display: block;
+        }
+    }
+
     &__nav{
         @include mediaQuery($mobile){
-            display: none;
+            position: fixed;
+            top: 0;
+            right: -350px;
+            height: 100vh;
+            width: 300px;
+            background-color: $clr-light;
+            border-left: 1px solid #ccc;
+            z-index: 999;
+
+            .btn__back{
+                position: absolute;
+                top: 2rem;
+                right: 2rem;
+                font-size: 2rem;
+            }
+
+            ul{
+                justify-content: flex-end;
+                flex-direction: column;
+                margin-top: 6rem;
+
+                li{
+                    margin-bottom: 2rem;
+                    
+
+                    a{
+                        font-size: 2.5rem;
+                    }
+                }
+            }
         }
         
         a{
